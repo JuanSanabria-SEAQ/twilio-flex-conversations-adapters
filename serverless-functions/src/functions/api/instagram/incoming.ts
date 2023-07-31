@@ -48,6 +48,7 @@ export const handler: ServerlessFunctionSignature<
     );
     if (!validSignature) {
       console.log("Invalid Signature");
+      console.log(validSignature);
       return callback("Invalid Signature");
     }
     // Step 2: Process Instagram Message
