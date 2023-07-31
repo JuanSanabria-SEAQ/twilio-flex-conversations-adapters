@@ -54,7 +54,6 @@ export const handler: ServerlessFunctionSignature<
     // Step 2: Process Instagram Message
     if (event.object !== "instagram") {
       console.log("Not an Instagram payload");
-      return callback("Invalid Payload");
     }
 
     // -- Handle multiple entries
