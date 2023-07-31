@@ -48,12 +48,12 @@ export const handler: ServerlessFunctionSignature<
     );
     if (!validSignature) {
       console.log("Invalid Signature");
-      console.log(validSignature);
       return callback("Invalid Signature");
     }
     // Step 2: Process Instagram Message
     if (event.object !== "instagram") {
       console.log("Not an Instagram payload");
+      return callback("Invalid Payload");
     }
 
     // -- Handle multiple entries
